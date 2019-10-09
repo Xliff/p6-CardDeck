@@ -9,7 +9,7 @@ use Clutter::Stage;
 use Clutter::Timeline;
 use Clutter::Main;
 
-use CardDeck::Themes::Standard;
+use CardDeck::Decks::Standard;
 
 my $stage-color = Clutter::Color.new(   0,   0,   0, 255);
 my $red         = Clutter::Color.new( 255,   0,   0, 255);

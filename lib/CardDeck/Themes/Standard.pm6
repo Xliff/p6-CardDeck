@@ -2,10 +2,10 @@ use v6.c;
 
 use CardDeck::Theme;
 
-class CardDeck::Themes::Standard does CardDeck::Theme {
+role CardDeck::Themes::Standard does CardDeck::Theme {
   constant deckPixbuf = "{$*CWD}/decks/deck-found-on-quora.png";
 
-  submethod BUILD {
+  method load-theme {
     $!row-spacing = 1;
     $!col-spacing = 0;
     $!offset-x    = 1;

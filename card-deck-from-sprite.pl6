@@ -26,7 +26,7 @@ $a.activate.tap({
   $ebox.events = GDK_BUTTON_PRESS_MASK;
   $ebox.add($image);
 
-  my $cards = CardDeck::Themes::Standard.new;
+  my $cards = CardDeck::Deck::Standard;
 
   my $event = -> *@a {
     CATCH { default { .message.say } }
