@@ -9,7 +9,7 @@ use Clutter::Stage;
 use Clutter::Timeline;
 use Clutter::Main;
 
-use CardDeck;
+use CardDeck::Themes::Standard;
 
 my $stage-color = Clutter::Color.new(   0,   0,   0, 255);
 my $red         = Clutter::Color.new( 255,   0,   0, 255);
@@ -68,14 +68,13 @@ sub MAIN {
   );
   $*stage.destroy.tap({ Clutter::Main.quit });
 
-  load-card-base("{$*CWD}/decks/deck-found-on-quora.png");
-
   $*stage.set_content_scaling_filters(
     CLUTTER_SCALING_FILTER_TRILINEAR,
     CLUTTER_SCALING_FILTER_LINEAR
   );
 
-  create-group(get-next-card-face, $red);
+  my $cards = CardDeck::Themes::Standard.new;
+  create-group($cards.pluck, $red);
 
   sub front {
     $side = Front;

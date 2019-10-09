@@ -10,7 +10,7 @@ use GTK::Application;
 use GTK::Image;
 use GTK::EventBox;
 
-use CardDeck;
+use CardDeck::Themes::Standard;
 
 my $a = GTK::Application.new(
   title  => 'org.genex.card_deck',
@@ -26,12 +26,12 @@ $a.activate.tap({
   $ebox.events = GDK_BUTTON_PRESS_MASK;
   $ebox.add($image);
 
-  load-card-base("{$*CWD}/decks/deck-found-on-quora.png");
+  my $cards = CardDeck::Themes::Standard.new;
 
   my $event = -> *@a {
     CATCH { default { .message.say } }
 
-    $image.pixbuf = get-next-card;
+    $image.pixbuf = $cards.pluck;
     G_SOURCE_CONTINUE;
   };
   GTK::Compat::Timeout.add(100, $event);
