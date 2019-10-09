@@ -24,11 +24,11 @@ $ zef install --deps-only .
 To run the first example, do:
 
 ```
-./p6gtkexec card-deck-from-sprite.pl6
+./p6gtkexec -Ilib card-deck-from-sprite.pl6
 ```
 
 Running the second example is similar:
 
 ```
-./p6gtkexec spin-the-card.pl6
+./p6gtkexec -Ilib spin-the-card.pl6
 ```
