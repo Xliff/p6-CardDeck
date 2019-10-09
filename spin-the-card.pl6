@@ -101,7 +101,7 @@ sub MAIN {
     # Find the index where rotation.abs falls, if that index
     # is odd, card side is back, otherwise front:
     #
-    # @a.first( * > $rotation.abs ) - 1 %% 2 ?? Back !! Front;
+    # @a.first( * > $rotation.abs, :k ) - 1 % 2 ?? Back !! Front;
     if $rotation >= $next-swap {
       if $side == Back {
         front
