@@ -68,7 +68,7 @@ sub MAIN {
   );
   $*stage.destroy.tap({ Clutter::Main.quit });
 
-  load-card-base("{$*CWD/decks/deck-found-on-quora.png");
+  load-card-base("{$*CWD}/decks/deck-found-on-quora.png");
 
   $*stage.set_content_scaling_filters(
     CLUTTER_SCALING_FILTER_TRILINEAR,
@@ -99,7 +99,9 @@ sub MAIN {
 
     # Given: my @a = (0, 90, *+180 ... Inf);
     # Find the index where rotation.abs falls, if that index
-    # is odd, card side is back, otherwise front.
+    # is odd, card side is back, otherwise front:
+    #
+    # @a.first( * > $rotation.abs ) - 1 %% 2 ?? Back !! Front;
     if $rotation >= $next-swap {
       if $side == Back {
         front
