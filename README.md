@@ -13,6 +13,8 @@ For Debian based systems, install these via:
 sudo apt install libclutter-1.0-dev
 ```
 
+### Project Installation
+
 That should cover the native library requirements for all projects.
 
 Make a directory to contain the p6-Gtk-based projects. Once made, then set the P6_GTK_HOME environment variable to that directory:
