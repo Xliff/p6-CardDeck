@@ -2,6 +2,8 @@ use v6.c;
 
 use GTK::Compat::Pixbuf;
 
+use RSVG;
+
 use CardDeck::Pluckable;
 
 role CardDeck::Theme {
@@ -15,32 +17,9 @@ role CardDeck::Theme {
   has $.card-width  is rw;
   has $.card-height is rw;
   has $.currentCard is rw;
+  has $.dpi         is rw;
 
   has $.pixbuf;
-
-  # method row-spacing is rw {
-  #   die 'Cannod call row-spacing from a non CardDeck::Theme routine.'
-  #     unless callframe(1).code.package ~~ CardDeck::Theme;
-  #   $!row-spacing;
-  # }
-  #
-  # method col-spacing is rw {
-  #   die 'Cannod call col-spacing from a non CardDeck::Theme routine.'
-  #     unless callframe(1).code.package ~~ CardDeck::Theme;
-  #   $!col-spacing;
-  # }
-  #
-  # method offset-x is rw {
-  #   die 'Cannod call offset-x from a non CardDeck::Theme routine.'
-  #     unless callframe(1).code.package ~~ CardDeck::Theme;
-  #   $!offset-x;
-  # }
-  #
-  # method offset-y is rw {
-  #   die 'Cannod call offset-y from a non CardDeck::Theme routine.'
-  #     unless callframe(1).code.package ~~ CardDeck::Theme;
-  #   $!offset-y;
-  # }
 
   method init-attributes {
     for ::?ROLE.^attributes».grep( *.has_accessor )».map( *.name.substr(2) ) {
@@ -61,7 +40,23 @@ role CardDeck::Theme {
   method load-theme { ... }
 
   method load-card-base ($filename) {
-    $!pixbuf = GTK::Compat::Pixbuf.new-from-file($filename);
+    $!pixbuf = do given $filename.IO.extension {
+      when 'svg' {
+        die 'Must have a DPI value set via theme!' unless $!dpi;
+
+        my $svg = RSVG.new-from-file($filename);
+        $svg.set-dpi($!dpi);
+        $svg.pixbuf;
+      }
+
+      when GTK::Compat::Pixbuf.get-formats.any {
+        GTK::Compat::Pixbuf.new-from-file($filename);
+      }
+
+      default {
+        die "Unknown image format '{$_}'";
+      }
+    }
   }
 
 }
