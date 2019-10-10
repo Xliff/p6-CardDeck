@@ -11,11 +11,11 @@ role CardDeck::Pluckable {
   }
 
   method pluck is export {
-    unless self.card-order {
+    unless self.deck.elems {
       return IterationEnd unless self.autoShuffle;
       self.shuffle;
     }
-    @!plucked.push: $!cardLastPlucked = self.card-order.pop;
+    @!plucked.push: $!cardLastPlucked = self.deck.pop;
 
     my $cardRow = $!cardLastPlucked div self.max-x;
     my $cardCol = $!cardLastPlucked   % self.max-x;

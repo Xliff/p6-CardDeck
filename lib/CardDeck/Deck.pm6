@@ -7,16 +7,21 @@ our enum ShuffleType <Default Random Custom>;
 class CardDeck::Deck does CardDeck::Pluckable {
   has $!theme;
   has $!autoShuffle;
-  has @!deck;
   has @!discarded;
+  has @!card-order;
 
-  has @.card-order;
+  has @.deck;
 
   has ShuffleType $.shuffleType is rw;
 
-  submethod BUILD {
-    @!card-order = (1...self.elems);
+  method set-order {
+    @!card-order  = (1...self.elems);
     $!autoShuffle = True;
+    $!shuffleType = Default;
+  }
+
+  method autoShuffle {
+    $!autoShuffle;
   }
 
   method new (|) {

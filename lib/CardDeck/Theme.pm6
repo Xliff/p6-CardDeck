@@ -16,7 +16,7 @@ role CardDeck::Theme {
   has $.card-height is rw;
   has $.currentCard is rw;
 
-  has $!pixbuf;
+  has $.pixbuf;
 
   # method row-spacing is rw {
   #   die 'Cannod call row-spacing from a non CardDeck::Theme routine.'
@@ -45,7 +45,7 @@ role CardDeck::Theme {
   method init-attributes {
     for ::?ROLE.^attributes».grep( *.has_accessor )».map( *.name.substr(2) ) {
       next unless $_;
-      .say;
+
       my $m = self.^lookup($_);
       next unless $m;
       $m.wrap: sub (|args) {
