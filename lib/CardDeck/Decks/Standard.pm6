@@ -1,20 +1,21 @@
 use v6.c;
 
 use CardDeck::Deck;
-use CardDeck::Theme::Standard;
+use CardDeck::Themes::Standard;
 
 class CardDeck::Decks::Standard
   is CardDeck::Deck
   does CardDeck::Themes::Standard
 {
   submethod TWEAK {
-    load-theme;
+    self.load-theme;
+    self.init-attributes;
   }
 
   proto method new (|)
   { * }
 
-  method new {
+  multi method new {
     self.bless;
   }
 }

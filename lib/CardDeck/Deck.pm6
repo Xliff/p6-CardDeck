@@ -1,19 +1,21 @@
 use v6.c;
 
-use CardDeck::Themes::Standard;
+use CardDeck::Pluckable;
 
-class CardDeck::Deck {
+our enum ShuffleType <Default Random Custom>;
+
+class CardDeck::Deck does CardDeck::Pluckable {
+  has $!theme;
   has $!autoShuffle;
-  has $!shuffleType;
-  has @!order;
   has @!deck;
-  has @!plucked;
   has @!discarded;
 
-  has $!theme;
+  has @.card-order;
+
+  has ShuffleType $.shuffleType is rw;
 
   submethod BUILD {
-    @!order = (1...self.elems);
+    @!card-order = (1...self.elems);
     $!autoShuffle = True;
   }
 
@@ -21,51 +23,22 @@ class CardDeck::Deck {
     die 'Cannot instantiate CardDeck::Deck. Please use one of the sub-classes!';
   }
 
-  method setShuffleType (ShuffleType $type) {
-    $!shuffleType = $type;
-  }
-
   method shuffle (&custom?) {
-    given $shuffleType {
+    given $!shuffleType {
       when Default {
-        @!deck = @!order;
+        @!deck = @!card-order;
       }
       when Random {
-        @!deck = @!order.sort({ rand });
+        @!deck = @!card-order.sort({ rand });
       }
       when Custom {
         die 'Custom function not specified for custom sort type.'
           unless &custom;
-        @!deck = @!order.sort({ &custom($_) });
+        @!deck = @!card-order.sort({ &custom($_) });
       }
     }
-    @!plucked = ()
+    self.clear-plucked;
     @!discarded = ();
-  }
-
-  method elems {
-    $!max-x * $!max-y;
-  }
-
-  method pluck is export {
-    unless @!order {
-      return IterationEnd unless $!autoShuffle;
-      self.shuffle;
-    }
-    @!plucked.push: $!currentCard = @!order.pop;
-
-    my $cardRow = $!currentCard div $!max-x;
-    my $cardCol = $!currentCard   % $!max-x;
-
-    GTK::Compat::Pixbuf.new-subpixbuf(
-      $!pixbuf,
-      $!offset-x + $!card-width  * $cardCol +
-        ($cardCol > 0 ?? $!col-spacing * ($cardCol - 1) !! 0),
-      $!offset-y + $!card-height * $cardRow +
-        ($cardRow > 0 ?? $!row-spacing * ($cardRow - 1) !! 0),
-      $!card-width,
-      $!card-height
-    );
   }
 
   method discard ($card) {

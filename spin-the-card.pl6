@@ -20,7 +20,7 @@ my $cyan        = Clutter::Color.new(   0, 255, 255, 255);
 my $purple      = Clutter::Color.new( 255,   0, 255, 255);
 
 sub get-next-card-face {
-  my $pixbuf = get-next-card;
+  my $pixbuf = $*cards.pluck;
 
   my $image = Clutter::Image.new;
   $image.set_data(
@@ -73,8 +73,8 @@ sub MAIN {
     CLUTTER_SCALING_FILTER_LINEAR
   );
 
-  my $cards = CardDeck::Themes::Standard.new;
-  create-group($cards.pluck, $red);
+  my $*cards = CardDeck::Decks::Standard.new;
+  create-group(get-next-card-face, $red);
 
   sub front {
     $side = Front;
