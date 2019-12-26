@@ -4,7 +4,7 @@ use GTK::Compat::Types;
 
 use GTK::Compat::Pixbuf;
 use GTK::Compat::Signal;
-use GTK::Compat::Timeout;
+use GLib::Timeout;
 
 use GTK::Application;
 use GTK::Image;
@@ -34,7 +34,7 @@ $a.activate.tap({
     $image.pixbuf = $cards.pluck;
     G_SOURCE_CONTINUE;
   };
-  GTK::Compat::Timeout.add(100, $event);
+  GLib::Timeout.add(100, $event);
   #GTK::Compat::Signal.connect($ebox, 'button-press-event', $event);
 
   $a.window.destroy-signal.tap({ $a.exit });
