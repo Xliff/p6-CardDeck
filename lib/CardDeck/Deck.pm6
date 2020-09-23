@@ -15,7 +15,7 @@ class CardDeck::Deck does CardDeck::Pluckable {
   has ShuffleType $.shuffleType is rw;
 
   method set-order {
-    @!card-order  = (1...self.elems);
+    @!card-order  = ^self.elems;
     $!autoShuffle = True;
     $!shuffleType = Default;
   }
