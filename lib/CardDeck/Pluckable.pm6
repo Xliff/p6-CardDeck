@@ -1,6 +1,6 @@
 use v6.c;
 
-use GTK::Compat::Pixbuf;
+use GDK::Pixbuf;
 
 role CardDeck::Pluckable {
   has @!plucked;
@@ -12,23 +12,27 @@ role CardDeck::Pluckable {
 
   method pluck is export {
     unless self.deck.elems {
+      say "AS: { self.autoShuffle }";
       return IterationEnd unless self.autoShuffle;
       self.shuffle;
     }
-    @!plucked.push: $!cardLastPlucked = self.deck.pop;
+    say "D: { self.deck.gist }";
+    @!plucked.push: ($!cardLastPlucked = self.deck.pop);
 
     my $cardRow = $!cardLastPlucked div self.max-x;
     my $cardCol = $!cardLastPlucked   % self.max-x;
 
-    GTK::Compat::Pixbuf.new-subpixbuf(
+    say "C: { $!cardLastPlucked }\nCard RC: ($cardRow, $cardCol)";
+
+    my $pb = GDK::Pixbuf.new-subpixbuf(
       self.pixbuf,
-      self.offset-x + self.card-width  * $cardCol +
-        ($cardCol > 0 ?? self.col-spacing * ($cardCol - 1) !! 0),
-      self.offset-y + self.card-height * $cardRow +
-        ($cardRow > 0 ?? self.row-spacing * ($cardRow - 1) !! 0),
+      self.offset-x + self.card-width  * $cardCol + self.col-spacing * $cardCol,
+      self.offset-y + self.card-height * $cardRow + self.row-spacing * $cardRow,
       self.card-width,
       self.card-height
     );
+    say "PB: { $pb // 'WTF!' }";
+    $pb;
   }
 
   method clear-plucked {
