@@ -1,0 +1,30 @@
+{
+    "depends": [
+        "p6-GtkPlus",
+        "p6-RSVG"
+    ],
+    "description": "A Raku module for creating GUI-based card decks",
+    "version": "r0.1",
+    "meta-version": "0",
+    "license": "GPL-3.0",
+    "source-url": "https://github.com/Xliff/p6-CardDecks",
+    "provides": {
+      "CardDeck::Deck"             :  "lib/CardDeck/Deck.pm6"            ,
+      "CardDeck::Decks::Standard"  :  "lib/CardDeck/Decks/Standard.pm6"  ,
+      "CardDeck::Pluckable"        :  "lib/CardDeck/Pluckable.pm6"       ,
+      "CardDeck::Theme"            :  "lib/CardDeck/Theme.pm6"           ,
+      "CardDeck::Themes::Standard" :  "lib/CardDeck/Themes/Standard.pm6" 
+    },
+    "name": "p6-CardDecks",
+    "perl": "6.c",
+    "test-depends": ["Test::META"],
+    "build-depends": [
+        "Text::Table::Simple",
+        "Dependency::Sort",
+        "Color",
+        "RandomColor",
+        "File::Find"
+    ],
+    "support": {"source": null},
+    "authors": ["clifton.wood@gmail.com"]
+}
