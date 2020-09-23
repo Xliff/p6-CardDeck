@@ -1,2 +1,2 @@
 prefix=CardDecks
-backups=backup,bitbucket
+backups=backup,google-backup,azure-backup
