@@ -1,6 +1,6 @@
 use v6.c;
 
-use GTK::Compat::Pixbuf;
+use GDK::Pixbuf;
 
 use RSVG;
 
@@ -49,14 +49,17 @@ role CardDeck::Theme {
         $svg.pixbuf;
       }
 
-      when GTK::Compat::Pixbuf.get-formats.any {
-        GTK::Compat::Pixbuf.new-from-file($filename);
+      when GDK::Pixbuf.get-formats.map( *.name ).any {
+        GDK::Pixbuf.new-from-file($filename);
       }
 
       default {
         die "Unknown image format '{$_}'";
       }
     }
+
+    say +$!pixbuf.GdkPixbuf.p;
+    say "H: { $!pixbuf.height }";
   }
 
 }
