@@ -1,10 +1,10 @@
 use v6.c;
 
-use GTK::Compat::Types;
+use GTK::Raw::Types;
 
-use GTK::Compat::Pixbuf;
-use GTK::Compat::Signal;
+use GLib::Signal;
 use GLib::Timeout;
+use GDK::Pixbuf;
 
 use GTK::Application;
 use GTK::Image;
