@@ -9,11 +9,11 @@
     "license": "GPL-3.0",
     "source-url": "https://github.com/Xliff/p6-CardDecks",
     "provides": {
-      "CardDeck::Deck"             :  "lib/CardDeck/Deck.pm6"            ,
-      "CardDeck::Decks::Standard"  :  "lib/CardDeck/Decks/Standard.pm6"  ,
       "CardDeck::Pluckable"        :  "lib/CardDeck/Pluckable.pm6"       ,
+      "CardDeck::Deck"             :  "lib/CardDeck/Deck.pm6"            ,
       "CardDeck::Theme"            :  "lib/CardDeck/Theme.pm6"           ,
-      "CardDeck::Themes::Standard" :  "lib/CardDeck/Themes/Standard.pm6" 
+      "CardDeck::Themes::Standard" :  "lib/CardDeck/Themes/Standard.pm6" ,
+      "CardDeck::Decks::Standard"  :  "lib/CardDeck/Decks/Standard.pm6"  
     },
     "name": "p6-CardDecks",
     "perl": "6.c",
