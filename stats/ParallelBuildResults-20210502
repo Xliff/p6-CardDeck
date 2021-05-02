@@ -1,6 +1,6 @@
  === GDK::Pixbuf === 
 Stage start      :   0.000
-Stage parse      :   2.860
+Stage parse      :   2.837
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
@@ -8,30 +8,30 @@ Stage mast       :   0.001
 Stage mbc        :   0.003
 Stage moar       :   0.000
 
-GDK::Pixbuf compile time: 3.35481907
+GDK::Pixbuf compile time: 3.3345011
  === RSVG === 
 Stage start      :   0.000
-Stage parse      :   2.962
+Stage parse      :   2.927
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
 Stage mast       :   0.001
-Stage mbc        :   0.004
+Stage mbc        :   0.008
 Stage moar       :   0.000
 
-RSVG compile time: 3.45817037
+RSVG compile time: 3.43466982
  === CardDeck::Pluckable === 
 Stage start      :   0.000
 
     precomp lib/CardDeck/Pluckable.pm6
     Stage start      :   0.000
-    Stage parse      :   3.082
+    Stage parse      :   2.977
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.003
-    Stage mast       :   0.038
+    Stage mast       :   0.039
     Stage mbc        :   0.012
-Stage parse      :   5.419
+Stage parse      :   5.422
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
@@ -39,19 +39,19 @@ Stage mast       :   0.001
 Stage mbc        :   0.001
 Stage moar       :   0.000
 
-CardDeck::Pluckable compile time: 5.90161766
+CardDeck::Pluckable compile time: 5.90819635
  === CardDeck::Deck === 
 Stage start      :   0.000
 
     precomp lib/CardDeck/Deck.pm6
     Stage start      :   0.000
-    Stage parse      :   1.996
+    Stage parse      :   1.981
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.011
     Stage mast       :   0.031
     Stage mbc        :   0.002
-Stage parse      :   4.327
+Stage parse      :   4.252
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
@@ -59,19 +59,19 @@ Stage mast       :   0.001
 Stage mbc        :   0.001
 Stage moar       :   0.000
 
-CardDeck::Deck compile time: 4.80450022
+CardDeck::Deck compile time: 4.7284826
  === CardDeck::Theme === 
 Stage start      :   0.000
 
     precomp lib/CardDeck/Theme.pm6
     Stage start      :   0.000
-    Stage parse      :   3.346
+    Stage parse      :   3.307
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.004
-    Stage mast       :   0.047
-    Stage mbc        :   0.015
-Stage parse      :   5.761
+    Stage mast       :   0.049
+    Stage mbc        :   0.018
+Stage parse      :   5.656
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
@@ -79,19 +79,19 @@ Stage mast       :   0.001
 Stage mbc        :   0.001
 Stage moar       :   0.000
 
-CardDeck::Theme compile time: 6.22665114
+CardDeck::Theme compile time: 6.13197978
  === CardDeck::Themes::Standard === 
 Stage start      :   0.000
 
     precomp lib/CardDeck/Themes/Standard.pm6
     Stage start      :   0.000
-    Stage parse      :   1.942
+    Stage parse      :   1.914
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.013
-    Stage mast       :   0.028
+    Stage optimize   :   0.002
+    Stage mast       :   0.024
     Stage mbc        :   0.003
-Stage parse      :   4.240
+Stage parse      :   4.127
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
@@ -99,19 +99,19 @@ Stage mast       :   0.001
 Stage mbc        :   0.001
 Stage moar       :   0.000
 
-CardDeck::Themes::Standard compile time: 4.7108493
+CardDeck::Themes::Standard compile time: 4.58709197
  === CardDeck::Decks::Standard === 
 Stage start      :   0.000
 
     precomp lib/CardDeck/Decks/Standard.pm6
     Stage start      :   0.000
-    Stage parse      :   1.952
+    Stage parse      :   1.932
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.003
-    Stage mast       :   0.031
+    Stage mast       :   0.030
     Stage mbc        :   0.001
-Stage parse      :   4.180
+Stage parse      :   4.202
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
@@ -119,6 +119,6 @@ Stage mast       :   0.001
 Stage mbc        :   0.001
 Stage moar       :   0.000
 
-CardDeck::Decks::Standard compile time: 4.6409062
+CardDeck::Decks::Standard compile time: 4.65892685
 
-Total compile time: 21.517792s
+Total compile time: 21.33640627s
