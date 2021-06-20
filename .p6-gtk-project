@@ -1,2 +1,2 @@
-prefix=CardDecks
+prefix=CardDeck
 backups=backup,google-backup,azure-backup
