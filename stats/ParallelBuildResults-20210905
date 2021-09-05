@@ -1,0 +1,124 @@
+ === GDK::Pixbuf === 
+Stage start      :   0.000
+Stage parse      :   3.539
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.004
+Stage moar       :   0.000
+
+GDK::Pixbuf compile time: 4.10384998
+ === RSVG === 
+Stage start      :   0.000
+Stage parse      :   3.677
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.004
+Stage moar       :   0.000
+
+RSVG compile time: 4.19597517
+ === CardDeck::Pluckable === 
+Stage start      :   0.000
+
+    precomp lib/CardDeck/Pluckable.pm6
+    Stage start      :   0.000
+    Stage parse      :   3.787
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.004
+    Stage mast       :   0.028
+    Stage mbc        :   0.015
+Stage parse      :   6.708
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+CardDeck::Pluckable compile time: 7.22534886
+ === CardDeck::Deck === 
+Stage start      :   0.000
+
+    precomp lib/CardDeck/Deck.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.515
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.006
+    Stage mast       :   0.027
+    Stage mbc        :   0.002
+Stage parse      :   5.362
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+CardDeck::Deck compile time: 5.87887027
+ === CardDeck::Theme === 
+Stage start      :   0.000
+
+    precomp lib/CardDeck/Theme.pm6
+    Stage start      :   0.000
+    Stage parse      :   4.127
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.010
+    Stage mast       :   0.035
+    Stage mbc        :   0.015
+Stage parse      :   7.003
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+CardDeck::Theme compile time: 7.50181197
+ === CardDeck::Themes::Standard === 
+Stage start      :   0.000
+
+    precomp lib/CardDeck/Themes/Standard.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.367
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.002
+    Stage mast       :   0.023
+    Stage mbc        :   0.004
+Stage parse      :   5.043
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+CardDeck::Themes::Standard compile time: 5.53787725
+ === CardDeck::Decks::Standard === 
+Stage start      :   0.000
+
+    precomp lib/CardDeck/Decks/Standard.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.353
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.004
+    Stage mast       :   0.023
+    Stage mbc        :   0.001
+Stage parse      :   5.039
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+
+CardDeck::Decks::Standard compile time: 5.52389811
+
+Total compile time: 25.8799501s
