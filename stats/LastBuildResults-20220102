@@ -1,0 +1,117 @@
+Dependency Generation
+=====================
+real 0.73
+user 1.16
+sys 0.07
+ === GDK::Pixbuf === (1/7)
+Stage start      :   0.000
+Stage parse      :   2.449
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.004
+Stage moar       :   0.000
+ === RSVG === (2/7)
+Stage start      :   0.000
+Stage parse      :   2.545
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.004
+Stage moar       :   0.000
+ === CardDeck::Pluckable === (3/7)
+Stage start      :   0.000
+
+    precomp lib/CardDeck/Pluckable.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.928
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.006
+    Stage mast       :   0.024
+    Stage mbc        :   0.008
+Stage parse      :   4.677
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.004
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === CardDeck::Deck === (4/7)
+Stage start      :   0.000
+
+    precomp lib/CardDeck/Deck.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.798
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.011
+    Stage mast       :   0.020
+    Stage mbc        :   0.003
+Stage parse      :   3.528
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.004
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === CardDeck::Theme === (5/7)
+Stage start      :   0.000
+
+    precomp lib/CardDeck/Theme.pm6
+    Stage start      :   0.000
+    Stage parse      :   3.276
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.009
+    Stage mast       :   0.032
+    Stage mbc        :   0.014
+Stage parse      :   5.098
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.004
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === CardDeck::Themes::Standard === (6/7)
+Stage start      :   0.000
+
+    precomp lib/CardDeck/Themes/Standard.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.824
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.005
+    Stage mast       :   0.016
+    Stage mbc        :   0.003
+Stage parse      :   3.583
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.004
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === CardDeck::Decks::Standard === (7/7)
+Stage start      :   0.000
+
+    precomp lib/CardDeck/Decks/Standard.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.852
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.007
+    Stage mast       :   0.023
+    Stage mbc        :   0.001
+Stage parse      :   3.661
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.004
+Stage mbc        :   0.000
+Stage moar       :   0.000
+
+real 27.32
+user 32.43
+sys 2.57
