@@ -1,24 +1,24 @@
 Dependency Generation
 =====================
-real 0.73
-user 1.16
-sys 0.07
+real 0.84
+user 1.32
+sys 0.03
  === GDK::Pixbuf === (1/7)
 Stage start      :   0.000
-Stage parse      :   2.449
+Stage parse      :   2.518
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.002
 Stage mbc        :   0.004
 Stage moar       :   0.000
  === RSVG === (2/7)
 Stage start      :   0.000
-Stage parse      :   2.545
+Stage parse      :   2.625
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
-Stage mast       :   0.001
+Stage mast       :   0.002
 Stage mbc        :   0.004
 Stage moar       :   0.000
  === CardDeck::Pluckable === (3/7)
@@ -26,92 +26,92 @@ Stage start      :   0.000
 
     precomp lib/CardDeck/Pluckable.pm6
     Stage start      :   0.000
-    Stage parse      :   2.928
+    Stage parse      :   3.234
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.006
-    Stage mast       :   0.024
+    Stage optimize   :   0.007
+    Stage mast       :   0.025
     Stage mbc        :   0.008
-Stage parse      :   4.677
+Stage parse      :   5.055
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.002
-Stage mast       :   0.004
-Stage mbc        :   0.000
+Stage mast       :   0.005
+Stage mbc        :   0.001
 Stage moar       :   0.000
  === CardDeck::Deck === (4/7)
 Stage start      :   0.000
 
     precomp lib/CardDeck/Deck.pm6
     Stage start      :   0.000
-    Stage parse      :   1.798
+    Stage parse      :   1.854
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.011
-    Stage mast       :   0.020
-    Stage mbc        :   0.003
-Stage parse      :   3.528
+    Stage optimize   :   0.013
+    Stage mast       :   0.029
+    Stage mbc        :   0.002
+Stage parse      :   3.656
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.002
-Stage mast       :   0.004
-Stage mbc        :   0.000
+Stage mast       :   0.005
+Stage mbc        :   0.001
 Stage moar       :   0.000
  === CardDeck::Theme === (5/7)
 Stage start      :   0.000
 
     precomp lib/CardDeck/Theme.pm6
     Stage start      :   0.000
-    Stage parse      :   3.276
+    Stage parse      :   3.420
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.009
-    Stage mast       :   0.032
-    Stage mbc        :   0.014
-Stage parse      :   5.098
+    Stage optimize   :   0.012
+    Stage mast       :   0.038
+    Stage mbc        :   0.013
+Stage parse      :   5.300
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.002
-Stage mast       :   0.004
-Stage mbc        :   0.000
+Stage mast       :   0.005
+Stage mbc        :   0.001
 Stage moar       :   0.000
  === CardDeck::Themes::Standard === (6/7)
 Stage start      :   0.000
 
     precomp lib/CardDeck/Themes/Standard.pm6
     Stage start      :   0.000
-    Stage parse      :   1.824
+    Stage parse      :   1.905
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.005
-    Stage mast       :   0.016
-    Stage mbc        :   0.003
-Stage parse      :   3.583
+    Stage optimize   :   0.006
+    Stage mast       :   0.034
+    Stage mbc        :   0.004
+Stage parse      :   3.866
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.002
 Stage mast       :   0.004
-Stage mbc        :   0.000
+Stage mbc        :   0.001
 Stage moar       :   0.000
  === CardDeck::Decks::Standard === (7/7)
 Stage start      :   0.000
 
     precomp lib/CardDeck/Decks/Standard.pm6
     Stage start      :   0.000
-    Stage parse      :   1.852
+    Stage parse      :   1.891
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.007
-    Stage mast       :   0.023
+    Stage optimize   :   0.008
+    Stage mast       :   0.027
     Stage mbc        :   0.001
-Stage parse      :   3.661
+Stage parse      :   3.747
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.002
 Stage mast       :   0.004
-Stage mbc        :   0.000
+Stage mbc        :   0.001
 Stage moar       :   0.000
 
-real 27.32
-user 32.43
-sys 2.57
+real 28.78
+user 34.23
+sys 2.39
